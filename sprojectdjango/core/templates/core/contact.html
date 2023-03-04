@@ -1,0 +1,52 @@
+
+{% extends 'core/base.html'%}
+
+{% block title %}Contacto{% endblock %}
+
+    {% block content%}
+    <header class="page-header page-header--contact">
+        <div class="page-header__container">
+            <h1 class="page-header__title">Lorem ipsum</h1>
+            <p class="page-header__content">Lorem ipsum dolor sit, amet</p>
+        </div>
+    </header>
+
+    <main role="main">
+        <article class="container container--main">
+
+            <form method="post" action='#'>
+                <div class="form-item">
+                    <label for="first-name">Nombre: 
+                        <input id="first-name" name="first-name" type="text" required />
+                    </label>
+                </div>
+
+                <div class="form-item">
+                    <label for="email">Dirreción de correo: 
+                        <input id="email" name="email" type="email" required />
+                    </label>
+                </div>
+
+                <div class="form-item">
+                    <label for="number">Teléfono: 
+                        <input id="number" name="number" type="tel" required />
+                    </label>
+                </div>  
+
+                <div class="form-item">
+                    <label for="Message">Mensaje:</label>
+                    <textarea id ="Message" rows="5" cols="40" placeholder="" name="Message"></textarea>
+                    
+                </div> 
+
+              <input type="submit" value="Enviar"/>
+            </form>
+
+
+        </article>
+    </main>
+
+    {% endblock%}
+
+
+           

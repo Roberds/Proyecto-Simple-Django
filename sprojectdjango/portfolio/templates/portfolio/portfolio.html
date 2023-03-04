@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Portafolio{% endblock %}
+
+        {% block content %}
+        <header class="page-header page-header--portfolio">
+            <div class="page-header__container">
+                <h1 class="page-header__title">Lorem ipsum</h1>
+                <p class="page-header__content">Lorem ipsum dolor sit, amet</p>
+            </div>
+        </header>
+
+        <main role="main">
+            <article class="container container--main">
+
+                {% for project in projects %}
+                <div class="row">
+                    <div class="column">
+                        <img src="{{project.image.url}}" alt="proyecto" width="100%">
+                    </div>
+                    <div class="column">
+                        <h2 class="column__title">{{project.title}}</h2>
+                        <p class="column__text">{{project.description}}</p>
+                        <p class="column__text--link"><a href="#">Más información</a></p>
+                    </div>
+                </div>
+                {% endfor %}
+            </article>
+        </main>
+
+        {% endblock %}
+
+        

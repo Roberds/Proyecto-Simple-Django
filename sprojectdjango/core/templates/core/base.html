@@ -1,0 +1,45 @@
+<!--Este html sera base con las partes comunes-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web personal | {% block title %}{% endblock %}</title>
+
+    {% load static %} <!--Cargamos los ficheros estaticos-->
+    <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
+    <link href="{% static 'https://file.myfontastic.com/BtgVPpfgehogk4R4BwjptM/icons.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <div class="container container--nav">
+                <p class="logo"><a href={% url 'index' %}>RDS DSNG</a></p>
+                    <ul class="menu" id="menu">
+                        <li class="menu__item"><a href={% url 'index' %} class="menu__link">Inicio</a></li>
+                        <li class="menu__item"><a href={% url 'about-me' %} class="menu__link">Acerca de</a></li>
+                        <li class="menu__item"><a href={% url 'portfolio' %} class="menu__link">Portafolio</a></li>
+                        <li class="menu__item"><a href={% url 'contact' %} class="menu__link">Contacto</a></li>
+                    </ul>
+            </div>
+        </nav>
+        {% block content %}
+        
+        {% endblock %}
+
+
+        <footer>
+            <div class="container container--fab">
+                <i class="fab fa-facebook-square"></i>
+                <a class="git" href="https://github.com/Roberds"><i class="fa-brands fa-github"></i></a>
+                <i class="fab fa-youtube"></i>
+            </div>
+            <div class="small-text">
+                <p>Copyright © RoberDS</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
